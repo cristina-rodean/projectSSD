@@ -1,0 +1,43 @@
+<app-search></app-search>
+<app-tags></app-tags>
+<ul>
+    <li *ngFor="let book of books">
+        <a routerLink="/book/{{book.id}}">
+             <img [src]="book.imageUrl" [alt]="book.name"/>
+             <div class="content">
+                <div class="name">
+                    {{book.name}}
+                </div>
+                <span class="favourite {{book.favourite?'':'not'}}">
+                    ❤
+                </span>
+
+                <div class="type">
+        
+                      {{book.type}}
+                </div>
+
+                <div class="product-item-footer">
+                    <div class="authors">
+                        
+                            {{book.author}}
+                        
+                    </div>
+
+                    <div class="borrow-time">
+                        <span>🕒</span>
+                        {{book.period}}
+                    </div>
+                </div>
+
+                <div class="price">
+                    <span>
+                      {{book.price | currency}}
+                    </span>
+                  </div>
+
+            </div>
+        </a>
+    </li>
+</ul>
+

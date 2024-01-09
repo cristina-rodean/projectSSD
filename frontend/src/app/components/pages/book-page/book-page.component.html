@@ -1,0 +1,35 @@
+<div class="container">
+    <img [src]="book.imageUrl" [alt]="book.name"/>
+  
+    <div class="details">
+      <div class="header">
+        <span class="name">
+          {{book.name}}
+        </span>
+        <span class="favorite {{book.favourite? '': 'not'}}">❤</span>
+      </div>
+      
+  
+      <div class="tags">
+          {{book.type}}
+        
+      </div>
+  
+      <div class="borrow-time">
+        <span>
+          Time in wich you can borrow the book <strong>{{book.period}}</strong> days.
+
+        </span>
+      </div>
+  
+      <div class="price">
+        <span>
+          {{book.price | currency}}
+        </span>
+      </div>
+  
+      <button>Add To Cart</button>
+      <button>Borrow</button>
+  
+    </div>
+  </div>
